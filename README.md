@@ -26,10 +26,10 @@ Here's a basic example of how to use the state-city-dropdown-india component in 
 
 ```jsx
 import React, { useState } from "react";
-import { StateCityDropdown } from "state-city-dropdown-india";
+import StateCityDropdown from "state-city-dropdown-india";
 
 function App() {
-  const [state, setState] = useState("");
+  const [state, setState] = useState(""); // state and city are the selected values
   const [city, setCity] = useState("");
 
   return (
@@ -41,7 +41,7 @@ function App() {
         onStateChange={(selectedState) => setState(selectedState)}
         onCityChange={(selectedCity) => setCity(selectedCity)}
         // styles: tailwind, inline, custom
-        className="tailwind classs"
+        className="tailwind classes"
         style={{ inlineStyle }}
         customStyle={customStyle} // vanilla css or custom css
         // to modify select, option modify the below props
